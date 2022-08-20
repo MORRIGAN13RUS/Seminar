@@ -1,10 +1,20 @@
 ﻿Console.WriteLine("Введите первое число: ");
-int x=Convert.ToInt32(Console.ReadLine());
+int x= Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число: ");
-int y=Convert.ToInt32(Console.ReadLine());
+int y= Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите третье число: ");
+int z= Convert.ToInt32(Console.ReadLine());
+int max=x,min=x;
 if (x>y){
-Console.WriteLine("max="+ x+ " ,min="+y);    
+    min=y;
 }
 else{
-Console.WriteLine("max="+ y+ " ,min="+x);
-};
+    max=y;
+}
+if (max<z){
+    max=z;
+}
+if(min>z){
+    min=z;
+}
+Console.WriteLine("min= "+ min+" ,max= "+max);
