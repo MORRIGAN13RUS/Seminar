@@ -1,4 +1,5 @@
-﻿Console.WriteLine("Введите целое число: ");
+﻿//вывод третьего элмента из любого целого числа
+Console.WriteLine("Введите целое число: ");
 char [] arr=Console.ReadLine().ToCharArray();
 if(arr[0]=='-'){
     if(arr.Length<4)
