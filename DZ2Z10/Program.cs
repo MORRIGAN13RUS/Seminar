@@ -12,4 +12,4 @@ x=x%100/10;
 if(x<0){
     x=x*-1;
 }
-Console.ReadLine(x);*/
+Console.WritLine(x);*/
