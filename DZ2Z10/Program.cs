@@ -6,3 +6,10 @@ if(arr[0]=='-'){
 else{
     Console.WriteLine(arr[1]);
 }
+// Женькино решение
+/*int x= Convert.ToInt32(Console.ReadLine());
+x=x%100/10;
+if(x<0){
+    x=x*-1;
+}
+Console.ReadLine(x);*/
