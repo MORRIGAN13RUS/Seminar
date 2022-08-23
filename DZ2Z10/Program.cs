@@ -1,9 +1,9 @@
 ﻿//Вывод второй цифры в трехзначном числе
 Console.WriteLine("Введите трехзначное число: ");
-string x=Console.ReadLine();
-char  GetSecondNumber (string num){
-char y;
-char [] arr=num.ToCharArray();
+int x=Convert.ToInt32(Console.ReadLine());
+char  GetSecondNumber ( int num){ 
+    char y;
+char [] arr=num.ToString().ToCharArray();
 if(arr[0]=='-'){
     y=arr[2];
 }
