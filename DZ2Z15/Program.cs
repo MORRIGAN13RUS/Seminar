@@ -1,7 +1,12 @@
 ﻿Console.WriteLine("Введите номер дня недели");
 int x=Convert.ToInt32(Console.ReadLine());
-void Weekend (int x) {
-if(x>5) Console.WriteLine("Ура! Бухаем!");
-else Console.WriteLine("Работайте, черти!");
+bool GetWeekend (int x) {
+    bool answer;
+if(x>5) answer=true;
+else answer=false;
+return answer;
 }
-Weekend (x);
+Console.WriteLine(GetWeekend (x));
+//Можно конечно ввствить еще условие, которое будет 
+//сравнивать булевую переменную и выводить по русски да и нет, но лень. 
+//А это писать не лень. :)

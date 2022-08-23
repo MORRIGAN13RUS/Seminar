@@ -1,14 +1,17 @@
 ﻿//вывод третьего элмента из любого целого числа
 Console.WriteLine("Введите целое число: ");
 char [] arr=Console.ReadLine().ToCharArray();
-if(arr[0]=='-'){
-    if(arr.Length<4)
-    Console.WriteLine("Третьего числа нет");
-    else Console.WriteLine(arr[3]);
+char GetTherdNumber( char[]array){
+    char z;
+if(array[0]=='-'&& array.Length>3){    
+    z=array[3];
 }
-else{
-    if(arr.Length<3)
-    Console.WriteLine("Третьего числа нет");
-    else
-    Console.WriteLine(arr[2]);
+else if (array[0]!='-'&&array.Length>2){
+       z=array[2];
 }
+else z='-';
+return z;
+}
+char x=GetTherdNumber(arr);
+if (x=='-') Console.WriteLine("Третьей цифры нет");
+else Console.WriteLine(x);

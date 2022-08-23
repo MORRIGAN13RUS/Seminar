@@ -1,15 +1,28 @@
-﻿Console.WriteLine("Введите трехзначное число: ");
-char [] arr=Console.ReadLine().ToCharArray();
+﻿//Вывод второй цифры в трехзначном числе
+Console.WriteLine("Введите трехзначное число: ");
+string x=Console.ReadLine();
+char  GetSecondNumber (string num){
+char y;
+char [] arr=num.ToCharArray();
 if(arr[0]=='-'){
-    Console.WriteLine(arr[2]);
+    y=arr[2];
 }
 else{
-    Console.WriteLine(arr[1]);
+    y=arr[1];
 }
-// Женькино решение
-/*int x= Convert.ToInt32(Console.ReadLine());
-x=x%100/10;
-if(x<0){
-    x=x*-1;
+return y;
 }
-Console.WritLine(x);*/
+Console.WriteLine(GetSecondNumber(x));
+
+// Второй вариант решения
+/*
+Console.WriteLine("Введите трехзначное число: ");
+int x= Convert.ToInt32(Console.ReadLine());
+int  GetSecondNumber (int num){
+num=num%100/10;
+if(num<0)
+    num=num*-1;
+return num
+}
+Console.WriteLine(GetSecondNumber(x));
+*/
