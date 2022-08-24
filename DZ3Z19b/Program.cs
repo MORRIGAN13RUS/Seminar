@@ -15,7 +15,6 @@ bool CheckPal(int x)
         arr[i] = x % 10;
         x = x / 10;
     }
-
     if (arr[0] == arr[4] && arr[1] == arr[3])
     {
         check = true;
