@@ -1,18 +1,19 @@
 ﻿//Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 //способ первый, без массива
+//Отрицательное число не является палиндромом
 Console.WriteLine("Введите пятизначное число: ");
 bool isNumber = int.TryParse(Console.ReadLine(), out int num);
-if (!isNumber)
+if (!isNumber|| num<10000|| num>99999)
 {
     Console.WriteLine("Ошибка ввода числа!");
     return;
 }
+
 bool CheckPal(int x)
 {
-    bool check = false;
-    if (x < 0)
+        if (x < 0)
     {
-        return check;
+        return false;
     }
     int a5 = x % 10;
     x = x / 10;
@@ -24,9 +25,9 @@ bool CheckPal(int x)
     int a1 = x / 10;
     if (a5 == a1 && a4 == a2)
     {
-        check = true;
+        return true;
     }
-    return check;
+    return false;
 }
 Console.WriteLine(CheckPal(num));
 

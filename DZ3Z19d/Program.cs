@@ -1,24 +1,27 @@
 ﻿//Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 //Четвертый способ  через string, универсально для любого количества символов в числе, но не более 10 (для int)
-Console.WriteLine("Введите пятизначное число: ");
-int num = Convert.ToInt32(Console.ReadLine());
+//В данном случае предполагаем, что палиндромом является любое положительное число начиная от двух символов и более.
+Console.WriteLine("Введите целое число: ");
+bool isNumber = int.TryParse(Console.ReadLine(), out int num);
+if (!isNumber)
+{
+    Console.WriteLine("Ошибка ввода числа!");
+    return;
+}
 bool CheckPal(int x)
 {
-    bool check = true;
-    if (x < 0)
+    string arr = x.ToString();
+    if (x < 10 || x > 9 && x < 100 && arr[0] != arr[1])
     {
-        check = false;
-        return check;
+        return false;
     }
-    string arr=x.ToString();
-            for (int i = 0; i < (arr.Length - 1) / 2; i++)
+    for (int i = 0; i < (arr.Length - 1) / 2; i++)
     {
         if (arr[i] != arr[arr.Length - 1 - i])
         {
-            check = false;
-            break;
+            return false;
         }
     }
-    return check;
+    return true;
 }
 Console.WriteLine(CheckPal(num));
