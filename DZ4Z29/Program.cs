@@ -1,7 +1,7 @@
 ﻿//Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 //1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 //6, 1, 33 -> [6, 1, 33]
-/*int GetLengthArr()
+int GetLengthArr()
 {
     Console.Write("Введите желаемое число элементов в массиве: ");
 
@@ -41,9 +41,5 @@ for(int i=0;i<Arr.Length-1;i++){
 }
  Console.Write(Arr[Arr.Length-1]+"]");
 }
-PrintArr(GetArray(GetLengthArr()));*/
+PrintArr(GetArray(GetLengthArr()));
 
-string y= "123";
-char [] Arr=y.ToCharArray();
-int x=(int) Arr[2];
-Console.WriteLine(x-48);
