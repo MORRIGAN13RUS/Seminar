@@ -21,7 +21,7 @@ int GetTruePowerB()
     Console.Write("Введите  степень (натуральное число), в которую будет возведено предыдущее введенное число: ");
 
     bool isNum = int.TryParse(Console.ReadLine(), out int num);
-    if (!isNum|| num<1)
+    if (!isNum || num < 1)
     {
         Console.WriteLine("Ошибка ввода!");
         Console.WriteLine("Напрягите хотябы одну извилину и попытайтесь ввести степень еще раз!");
@@ -29,12 +29,13 @@ int GetTruePowerB()
     }
     return num;
 }
-void PrintNumberToPower(int A, int B){
-    int res=1;
-    for (int i = 1; i <=B; i++)
+void PrintNumberToPower(int A, int B)
+{
+    int res = 1;
+    for (int i = 1; i <= B; i++)
     {
-       res=res*A;
+        res = res * A;
     }
     Console.WriteLine($"Результат возведения {A} в натуральную степень {B} равен {res}");
 }
-PrintNumberToPower(GetTrueNumberA(),GetTruePowerB());
+PrintNumberToPower(GetTrueNumberA(), GetTruePowerB());

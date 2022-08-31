@@ -14,21 +14,21 @@ int GetTrueNumber()
         Console.WriteLine("Попробуйте ввести это значение еще раз!");
         return GetTrueNumber();
     }
-    if(num<0)
-    { 
-        num=num * -1;
+    if (num < 0)
+    {
+        num = num * -1;
     }
     return num;
 }
 int GetSumm(int number)
 {
-    int summ=0;
-    while(number>0)
+    int summ = 0;
+    while (number > 0)
     {
-        summ=summ+number%10;
-        number=number/10;
+        summ = summ + number % 10;
+        number = number / 10;
     }
-return summ;
+    return summ;
 }
 
- Console.Write(GetSumm( GetTrueNumber()));
+Console.Write(GetSumm(GetTrueNumber()));
