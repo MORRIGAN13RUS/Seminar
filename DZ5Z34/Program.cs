@@ -22,35 +22,35 @@ int[] GetArray(int Length)
     int[] Arr = new int[Length];
     for (int i = 0; i < Length; i++)
     {
-        Arr[i] = Ran.Next(100,1000);
+        Arr[i] = Ran.Next(100, 1000);
     }
-        return Arr;
+    PrintArr(Arr);
+    return Arr;
 }
-void PrintArr (int []Arr){
+void PrintArr(int[] Arr)
+{
     for (int i = 0; i < Arr.Length; i++)
     {
-        if(i<Arr.Length-1){
-            Console.Write (Arr[i]+", ");
+        if (i < Arr.Length - 1)
+        {
+            Console.Write(Arr[i] + ", ");
         }
-        else {
-            Console.Write (Arr[i]);
+        else
+        {
+            Console.WriteLine(Arr[i]);
         }
     }
 }
-
-int SummEvenNumb (int [] Arr)
+int SummEvenNumb(int[] Arr)
 {
-    int Summ=0;
-for (int i = 0; i < Arr.Length; i++)
-{
-    if (Arr[i]%2==0){
-Summ++;
+    int Summ = 0;
+    for (int i = 0; i < Arr.Length; i++)
+    {
+        if (Arr[i] % 2 == 0)
+        {
+            Summ++;
+        }
     }
+    return Summ;
 }
-return Summ;
-}
-
-
-int [] Arr=GetArray(GetLengthArr());
-PrintArr(Arr);
-Console.WriteLine(SummEvenNumb(Arr));
+Console.WriteLine(SummEvenNumb(GetArray(GetLengthArr())) + " четных числа в данном массиве");
