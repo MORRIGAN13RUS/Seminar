@@ -53,7 +53,7 @@ double[] GetArrayArithmeticMean(int[,] Arr)
             }
         }
         double x=summ;
-        ArrAM[n] = x / Arr.GetLength(0);
+        ArrAM[n] = Math.Round((x / Arr.GetLength(0)),2);
     }
     return ArrAM;
 }
