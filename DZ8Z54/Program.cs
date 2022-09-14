@@ -21,7 +21,6 @@ int[,] FillRandomArray()
 
 void PrintArray(int[,] Array)
 {
-
     for (int i = 0; i < Array.GetLength(0); i++)
     {
         for (int j = 0; j < Array.GetLength(1); j++)
@@ -40,7 +39,7 @@ int[,] SortingArr(int[,] Arr)
         int maxI = i;
         int maxJ = n;
         int max;
-        while (n < Arr.GetLength(1)-1)
+        while (n < Arr.GetLength(1) - 1)
         {
             max = Arr[i, n];
             maxJ = n;
