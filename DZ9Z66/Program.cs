@@ -3,10 +3,11 @@
 //M = 4; N = 8. -> 30
 
 Random rnd = new Random();
-int M=rnd.Next(1,21);
-int N=rnd.Next(M+1,M+20);
-int GetSumNumb (int M,int N){
-if(M<=N) return M+GetSumNumb(M+1,N);
-else return 0;
+int M = rnd.Next(1, 21);
+int N = rnd.Next(M + 1, M + 20);
+int GetSumNumb(int M, int N)
+{
+    if (M <= N) return M + GetSumNumb(M + 1, N);
+    else return 0;
 }
-Console.WriteLine($"Сумма натуральных элементов от {M}  до {N} равна " + GetSumNumb(M,N));
+Console.WriteLine($"Сумма натуральных элементов от {M}  до {N} равна " + GetSumNumb(M, N));

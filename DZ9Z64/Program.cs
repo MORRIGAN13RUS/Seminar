@@ -3,10 +3,11 @@
 //M = 4; N = 8. -> ""4, 6, 7, 8""
 
 Random rnd = new Random();
-int M=rnd.Next(1,21);
-int N=rnd.Next(M+1,M+20);
-string GetListNumb (int M,int N){
-if(M<=N) return $"{M}  "+GetListNumb(M+1,N);
-else return string.Empty;
+int M = rnd.Next(1, 21);
+int N = rnd.Next(M + 1, M + 20);
+string GetListNumb(int M, int N)
+{
+    if (M <= N) return $"{M}  " + GetListNumb(M + 1, N);
+    else return string.Empty;
 }
-Console.WriteLine(GetListNumb(M,N));
+Console.WriteLine(GetListNumb(M, N));
